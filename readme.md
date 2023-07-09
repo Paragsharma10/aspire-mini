@@ -41,9 +41,15 @@ API authentication is required for certain endpoints. To authenticate, include t
 Import Postman collection
 https://www.postman.com/Parag10/workspace/aspire-mini/collection/7693276-e8c8b6a8-360c-43cf-92bc-036435196bc9?action=share&creator=7693276
 
+For Authorization:
+php artisan passport:install
+php artisan migrate
+
 Authorization: Bearer {API_TOKEN}
 To obtain an API token, please contact the API administrator.
 
+
+Change the passport client and id in postman collection
 
 
 
