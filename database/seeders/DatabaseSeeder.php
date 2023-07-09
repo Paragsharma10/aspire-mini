@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Admin',
             'email' => 'admin@gmail.com',
             'email_verified_at' => now(),
-            'password' => password_hash('123456', PASSWORD_DEFAULT), // password
+            'password' => password_hash('qwerty', PASSWORD_DEFAULT), // password
             'remember_token' => Str::random(10),
             'role' => 'admin',
         ]);
@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'User',
             'email' => 'user@gmail.com',
             'email_verified_at' => now(),
-            'password' => password_hash('123456', PASSWORD_DEFAULT), // password
+            'password' => password_hash('qwerty', PASSWORD_DEFAULT), // password
             'remember_token' => Str::random(10),
             'role' => 'user',
         ]);

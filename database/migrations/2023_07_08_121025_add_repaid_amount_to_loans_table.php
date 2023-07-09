@@ -11,13 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('loans', function (Blueprint $table) {
-            $table->id();
-            $table->integer('user_id')->index();
-            $table->integer('amount');
-            $table->integer('term');
-            $table->enum('status',['approved','rejected','pending','paid']);
-            $table->timestamps();
+        Schema::table('loans', function (Blueprint $table) {
+            $table->float('repaid_amount')->default(0);
         });
     }
 
@@ -26,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('loans');
+        Schema::table('loans', function (Blueprint $table) {
+            //
+        });
     }
 };

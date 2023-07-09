@@ -16,6 +16,7 @@ class LoanRepaymentRequest extends CustomFormRequest
     {
         return [
             'id' => 'required|exists:loans,id',
+            'amount' => 'required|min:1',
         ];
     }
 }
